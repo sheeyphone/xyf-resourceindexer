@@ -1,0 +1,76 @@
+{
+  "name": "xyf-resourceindexer",
+  "displayName": "ResourcesIndexer",
+  "description": "Auto create the assets' index. (Just like the android res manager)",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "author": {
+    "name": "Eephone Xu",
+    "email": "331659009@qq.com",
+    "url": "https://github.com/sheeyphone/"
+  },
+  "activationEvents": [
+    "onCommand:xyf-resourceindexer.buildRes"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "xyf-resourceindexer.buildRes",
+        "title": "Build Assets"
+      }
+    ],
+    "configuration": [
+      {
+        "title": "ResourcesIndexer",
+        "properties": {
+          "resourcesindexer.assetsPath": {
+            "type": "array",
+            "default": [
+              "./src/assets/"
+            ],
+            "description": "Specify the resources path to index."
+          },
+          "resourcesindexer.assetsCfgFileName": {
+            "type": "string",
+            "default": "assets.js",
+            "description": "Specify the autocreated filename in assetsPath."
+          },
+          "resourcesindexer.allowSurfix": {
+            "type": "array",
+            "default": [
+              "png",
+              "jpg",
+              "jpeg"
+            ],
+            "description": "Specify the surfix in white list to filter."
+          }
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "yarn run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.1",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.75.0",
+    "@vscode/test-electron": "^2.2.2",
+    "eslint": "^8.33.0",
+    "glob": "^8.1.0",
+    "mocha": "^10.1.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
