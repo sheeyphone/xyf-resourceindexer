@@ -46,6 +46,11 @@ Initial release of basic command "Build Assets".
 
 Fix the console output and put some message on it.
 
+### 0.0.3
+
+Fix some grammar in README.md.
+Fix the engines to "^1.8.0".
+
 ---
 
 ## For more information
