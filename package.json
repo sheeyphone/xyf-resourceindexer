@@ -2,7 +2,7 @@
   "name": "xyf-resourceindexer",
   "displayName": "ResourcesIndexer",
   "description": "Auto create the assets' index. (Just like the android res manager)",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.8.0"
   },

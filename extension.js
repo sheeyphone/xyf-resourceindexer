@@ -97,7 +97,7 @@ function initRes() {
     fs.writeSync(fd, `export {`);
     fs.writeSync(fd, "\r\n");
     pathList.forEach((data) => {
-      fs.writeSync(fd, `  ${data.name}`);
+      fs.writeSync(fd, `  ${data.name},`);
       fs.writeSync(fd, "\r\n");
     });
     fs.writeSync(fd, `}`);
