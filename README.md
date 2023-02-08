@@ -4,7 +4,7 @@ This is an great extension for creating assets' index into a javascript file. Ju
 
 ## How to use
 
-For example, in your project, we recommend you to put your assets in the path like `"./src/assets/"`. Including but not limit to `"png","jpg","jpeg"`. This extension will create a index file named `assets.js`, containing all of the assets path and resources exportation filtered by the `allowSurfix`.
+For example, in your project, we recommend you to put your assets in the path such as `"./src/assets/"`. Including but not limit to `"png","jpg","jpeg"`. This extension will create an index file named `assets.js`, containing all of the assets path and resources exportation filtered by the `allowSurfix`.
 
 > Firstly, press `Ctrl+Shift+P` to open the command line in vscode. And next, input `Build Assets` and press `Enter`.
 
