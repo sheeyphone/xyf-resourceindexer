@@ -1,65 +1,49 @@
 # xyf-resourceindexer README
 
-This is the README for your extension "xyf-resourceindexer". After writing up a brief description, we recommend including the following sections.
+This is an great extension for creating assets' index into a javascript file. Just like how does android develop environment create a R.java resource link for all assets.
 
-## Features
+## How to use
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+For example, in your project, we recommend you to put your assets in the path like `"./src/assets/"`. Including but not limit to `"png","jpg","jpeg"`. This extension will create a index file named `assets.js`, containing all of the assets path and resources exportation filtered by the `allowSurfix`.
 
-For example if there is an image subfolder under your extension project workspace:
+> Firstly, press `Ctrl+Shift+P` to open the command line in vscode. And next, input `Build Assets` and press `Enter`.
 
-\!\[feature X\]\(images/feature-x.png\)
+- Put a `logo.png` into the assets path:
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+```
+/src/assets/logo.png
+```
 
-## Requirements
+- Enter the `Build Assets` command and see how we do:
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+```
+/src/assets/assets.js
+---------------------
+// This file is created by xyf-resourceindexer
+import logoPng from "./logo.png";
 
-## Extension Settings
+export {
+  logoPng
+}
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+```
 
-For example:
+## Preferences & Settings
 
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
+| Config Name                        | Default value        |
+| ---------------------------------- | -------------------- |
+| resourcesindexer.assetsPath        | "./src/assets/"      |
+| resourcesindexer.assetsCfgFileName | "assets.js"          |
+| resourcesindexer.allowSurfix       | ["png","jpg","jpeg"] |
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 0.0.1
 
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Initial release of basic command "Build Assets".
 
 ---
 
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
 ## For more information
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+- [Source code in GitHub](https://github.com/sheeyphone/xyf-resourceindexer)

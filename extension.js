@@ -86,7 +86,7 @@ function initRes() {
     let fd = fs.openSync(pathJsCfgFile, "w+");
     getAllFiles(pathList, pathJoin);
     // write the assets.js content into assetsCfgFileName we sepecify.
-    fs.writeSync(fd, `// This file is created by res.config.js`);
+    fs.writeSync(fd, `// This file is created by xyf-resourceindexer`);
     fs.writeSync(fd, "\r\n");
     pathList.forEach((data) => {
       fs.writeSync(fd, `import ${data.name} from "${data.path}";`);
