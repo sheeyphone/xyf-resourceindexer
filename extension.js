@@ -22,7 +22,6 @@ function activate(context) {
   vscode.workspace.onDidChangeConfiguration((event) => {
     let configuration = vscode.workspace.getConfiguration();
     let configItems = getConfigItems(configuration);
-    console.log(configItems, event);
   });
 
   // The command has been defined in the package.json file
@@ -46,7 +45,9 @@ function activate(context) {
       });
 
       // Display a message box to the user
-      vscode.window.showInformationMessage(`${folders}`);
+      vscode.window.showInformationMessage(
+        `Finished! Check the ${assetsCfgFileName} in ${assetsPath}.`
+      );
     }
   );
 

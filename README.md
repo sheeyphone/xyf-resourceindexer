@@ -42,6 +42,10 @@ export {
 
 Initial release of basic command "Build Assets".
 
+### 0.0.2
+
+Fix the console output and put some message on it.
+
 ---
 
 ## For more information

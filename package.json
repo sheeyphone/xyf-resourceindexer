@@ -2,13 +2,16 @@
   "name": "xyf-resourceindexer",
   "displayName": "ResourcesIndexer",
   "description": "Auto create the assets' index. (Just like the android res manager)",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.75.0"
   },
   "categories": [
     "Other"
   ],
+  "repository": {
+    "url": "https://github.com/sheeyphone/xyf-resourceindexer"
+  },
   "publisher": "EephoneXu",
   "author": {
     "name": "Eephone Xu",
